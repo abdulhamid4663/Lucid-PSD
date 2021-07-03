@@ -1,0 +1,47 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.button {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 13px 26px;
+    background: none;
+    border: 2px solid #454449;
+    border-radius: 3px;
+    @extend %transition;
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &:hover {
+        background: $sky-color;
+        border-color: $sky-color;
+    }
+}
+.bottom-left-line {
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: $sky-color;
+        @extend %transition;
+    }
+}
+.bottom-right-line {
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 3px;
+        background: $sky-color;
+        @extend %transition;
+    }
+}

@@ -1,0 +1,64 @@
+.quality {
+    background: url(../images/second-banner.png);
+    background-position: center;
+    background-size: cover;
+    padding-top: 65px;
+    padding-bottom: 60px;
+
+    #carouselExampleIndicators {
+        .carousel-indicators {
+            position: relative;
+            margin-top: 140px;
+            margin-bottom: 0;
+            button {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+        }
+    }
+    &:hover .bottom-left-line::before , &:hover .bottom-right-line::after {
+        width: 46%;
+    }
+    &__header {
+        padding-bottom: 20px;
+        h5 {
+          @extend %smheader;
+        }
+        h2 {
+            color: #fff;
+            @extend %lgheader;
+        }
+    }
+    &__line {
+        position: relative;
+        width: 42px;
+        margin: 0 auto;
+    }
+    &__message {
+        margin-top: 95px;
+        padding-bottom: 20px;
+        h4 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+            max-width: 560px;
+            font-style: italic;
+        }
+    }
+    &__author {
+        .author__detail {
+            padding-left: 20px;
+            span {
+                display: block;
+                font-size: 16px;
+                font-weight: 400;
+                color: #fff;
+            }
+            strong {
+                font-size: 14px;
+                color: #fff;
+            }
+        }
+    }
+}

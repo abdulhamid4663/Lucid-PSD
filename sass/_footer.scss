@@ -1,0 +1,30 @@
+.footer {
+    padding-top: 55px;
+    padding-bottom: 45px;
+    background: #15141a;
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+            a {
+                span {
+                    font-size: 20px;
+                    color: #444348;
+                    @extend %transition;
+                    &:hover {
+                    color: $sky-color;
+                    }
+                }
+                
+            }
+        }
+    }
+    &__copyright {
+        margin-top: 30px;
+        p {
+            color: #444348;
+            margin: 0;
+        }
+    }
+}

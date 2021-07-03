@@ -1,0 +1,79 @@
+.contact {
+    position: relative;
+    padding-top: 60px;
+    background: #ededed;
+    &:hover .bottom-left-line::before, &:hover .bottom-right-line::after {
+        width: 46%;
+    }
+    &__header {
+        padding-bottom: 20px;
+        h5 {
+            @extend %smheader;
+        }
+        h2 {
+            @extend %lgheader;
+        }
+    }
+    &__line {
+        position: relative;
+        width: 42px;
+        margin: 0 auto 55px;
+    }
+    &__icon {
+        padding-bottom: 20px;
+        span {
+            font-size: 30px;
+            color: $sky-color;
+        }
+    }
+    &__details {
+        span {
+            @extend %para;
+            display: block;
+        }
+    }
+    &__form {
+        background: #15141a;
+        padding: 60px 80px 45px 60px;
+        transform: translateY(20%);
+        -webkit-transform: translateY(20%);
+        -moz-transform: translateY(20%);
+        input, textarea {
+            width: 100%;
+            padding: 11px 20px;
+            background: none;
+            border: 1px solid #444348;
+            border-radius: 3px;
+            &::placeholder {
+                font-size: 14px;
+                font-weight: 700;
+                color: #fff;
+                opacity: 20%;
+                text-transform: uppercase;
+            }
+            &:focus {
+                color: #fff;
+            }
+        }
+    }
+    &__textarea {
+        textarea {
+            background: none;
+            height: 177px;
+        }
+    }
+    &__button {
+        .button {
+
+            @include breakpoint-down (xlarge) {
+                margin-top: 15px;
+            }
+        }
+    }
+    &__map {
+        background: url(../images/map.png);
+        background-size: cover;
+        width: 100%;
+        height: 370px;
+    }
+}

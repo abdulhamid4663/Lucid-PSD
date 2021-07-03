@@ -1,0 +1,82 @@
+.detail {
+    padding-top: 70px;
+    padding-bottom: 45px;
+
+    &:hover .bottom-left-line::before, &:hover .bottom-right-line::after {
+        width: 20px;
+    }
+    &__phone {
+        @include breakpoint-down (large) {
+            text-align: center;
+        }
+        img {
+            margin-left: 100px;
+
+            @include breakpoint-down (xxlarge) {
+                margin-left: 35px;
+            }
+            @include breakpoint-down (xlarge) {
+                margin-left: 10px;
+            }
+            @include breakpoint-down (large) {
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+    }
+    &__header {
+        position: relative;
+        padding-top: 55px;
+        padding-bottom: 15px;
+        h5 {
+            @extend %smheader;
+            
+        }
+        h2 {
+            @extend %lgheader;
+        }
+        .bottom-left-line {
+            left: 5%;
+        }
+        .bottom-right-line {
+            
+            right: 100%;
+            transform: translateX(100%);
+        }
+    }
+    &__line {
+        position: relative;
+        width: 42px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    &__description {
+        p {
+            @extend %para;
+            max-width: 485px;
+        }
+            
+    }
+    &__quality {
+        ul {
+            padding: 0;
+            li {
+                list-style: none;
+                padding-bottom: 10px;
+                span {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    font-size: 15px;
+                    text-align: center;
+                    color: $sky-color;
+                }
+                strong {
+                    @extend %para;
+                    color: $blackish-color;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

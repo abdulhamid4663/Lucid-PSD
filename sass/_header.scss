@@ -1,0 +1,75 @@
+header {
+    background: url(../images/banner.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 70vh;
+    nav {
+        padding-top:20px!important;
+        ul {
+            li {
+                &:not(:last-child) {
+                    padding-right: 25px;
+                    
+                    @include breakpoint-down(large) {
+                        padding-right: 0;
+                    }
+                }
+                a.nav-link {
+                    position: relative;
+                    padding: 20px 0 20px!important;
+                    color: $whiteish-color!important;
+                    font-size:16px;
+                    &:hover {
+                        color: $whiteish-color;
+                    }
+                    
+                    
+                    &:hover .bottom-left-line::before, &:hover .bottom-right-line::after {
+                        width: 46%;
+                    }
+                }
+            }
+        }
+    }
+    .hero {
+        
+        &__texts {
+            padding-top: 90px;
+            .hero__intro {
+                padding-bottom: 15px;
+                h5 {
+                    @extend %smheader;
+                }
+            }
+            .hero__title {
+                padding-bottom: 15px;
+               h1 {
+                    font-size: 46px;
+                    font-weight: 500;
+                    color: #fff;
+                    line-height: 1;
+                    
+                    @include breakpoint-up(xlarge){
+                        font-size: 48px;
+                    }
+                } 
+            }
+            .hero__description {
+                padding-bottom: 60px;
+                p {
+                    @extend %para;
+                    max-width: 480px;
+                }
+            }
+        }
+        &__phone {
+            padding-top: 50px;
+            text-align: end;
+            img {
+                @include breakpoint-down (xlarge){
+                    margin-top:38px;
+                }
+            }
+        }
+    }
+}

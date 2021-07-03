@@ -1,0 +1,77 @@
+
+.feature {
+    padding-top: 65px;
+    padding-bottom: 75px;
+    border-bottom: 1px solid #ededed;
+    &:hover .bottom-left-line::before, &:hover .bottom-right-line::after {
+        width: 20px;
+    }
+    &__header {
+        position: relative;
+        padding-bottom: 20px;
+        h5 {
+            @extend %smheader;
+        }
+        h2 {
+            @extend %lgheader;
+        }
+    }
+    &__line {
+        position: relative;
+        width: 42px;
+        margin: 0 auto;
+        margin-bottom: 75px;
+    }
+    &__icon {
+        display:inline-block;
+        width: 90px;
+        height: 90px;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        &:hover {
+            animation-name: test;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        } 
+        span {
+            line-height: 90px;
+            color: $sky-color;
+            font-size: 28px; 
+        }
+        @keyframes test {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(10deg);
+            }
+            100% {
+                transform: rotate(-10deg);
+            }
+        }
+    }
+    &__title {
+        h5 {
+           font-size: 24px;
+            font-weight: 500;
+            color: $veryblackish-color;
+            padding-bottom: 15px;
+            margin: 0;
+        } 
+    }
+    &__description {
+        p {
+            @extend %para;
+            padding:0 30px;
+            @include breakpoint-down (xxlarge){
+                padding: 0 15px;
+            }
+            @include breakpoint-down (xlarge){
+                padding: 0 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.rate {
+    background: #15141a;
+    padding: 60px 0;
+    &__text {
+        h4 {
+            font-size: 36px;
+            font-weight: 300;
+            color: #fff;
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+    
+}

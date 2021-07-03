@@ -1,0 +1,28 @@
+.info {
+    background: #f2f2f2;
+    padding-top: 40px;
+    padding-bottom: 10px;
+
+    &:hover .bottom-left-line::before, &:hover .bottom-right-line::after {
+        width: 46%;
+    }
+    &__header {
+        padding-bottom: 20px;
+        h5 {
+            @extend %smheader;
+        }
+        h2 {
+            @extend %lgheader;
+        }
+    }
+    &__line {
+        position: relative;
+        width: 42px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    &__description {
+        @extend %para;
+        max-width: 480px;
+    }
+}

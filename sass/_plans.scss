@@ -1,0 +1,95 @@
+.plan {
+    padding: 60px 0;
+
+    &:hover .bottom-left-line::before ,&:hover .bottom-right-line::after {
+        width: 46%;
+    }
+    &__content {
+        border: 1px solid #e0e0e0;
+
+        &:hover .plan__title h2 {
+            color: $sky-color;
+        }
+        &:hover .plan__price {
+            background: $sky-color;
+            color: #fff;
+        }
+        &:hover .plan__price h1, &:hover .plan__price span {
+            color: #fff;
+        }
+    }
+    &__header {
+        padding-bottom: 20px;
+        h5 {
+            @extend %smheader;
+        }
+        h2 {
+            @extend %lgheader;
+        }
+    }
+    &__line {
+        position: relative;
+        width: 42px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+    }
+    &__title {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+        h2 {
+            @extend %lgheader;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            @extend %transition;
+        }
+    }
+    &__price {
+        padding-top: 25px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e0e0e0;
+        @extend %transition;
+        h1 {
+            font-size: 60px;
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+            color: $veryblackish-color;
+            span {
+                color: $veryblackish-color;
+                font-size: 24px;
+                display: inline;
+            }
+        }
+        span {
+            display: block;
+            margin-top: -10px;
+            color: $gray-color;
+        }
+    }
+    &__description {
+        padding: 50px 50px 40px;
+        h6 {
+            @extend %para;
+            span {
+                color: #008ed6;
+            }
+        }
+
+        @include breakpoint-down (xxlarge) {
+            padding: 50px 25px 40px;
+        }
+    }
+    &__button {
+        padding-bottom: 30px;
+        .button {
+            padding: 13px 40px;
+            color: $sky-color;
+            border: 1px solid #e0e0e0;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
